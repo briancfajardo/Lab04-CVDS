@@ -24,6 +24,7 @@ public class GameModel {
     private LocalDateTime dateTime;
     private int gameScore;
     private int[] lettersUsed;
+    private GameScore gameScoreCal;
     
     
     private HangmanDictionary dictionary;
@@ -78,6 +79,13 @@ public class GameModel {
         } else {
             correctCount += positions.size();
         }
+        
+        try{
+            gameScore = gameScoreCal.calculateScore(correctCount, incorrectCount);
+        }catch(ScoreException e){
+            System.out.println(e.getMessage());
+        }
+            
         return positions;
         
     }

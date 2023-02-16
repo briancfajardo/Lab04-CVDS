@@ -12,6 +12,11 @@ import org.junit.Test;
 
 public class GameScoreTest { 
 
+    /*
+     * Prueba de la clase OriginalScore. Puntaje mayor a cero
+     * Validación del calculo del puntaje
+    */
+
     @Test
     public void validateCorrectScoreOriginal (){
         int score  = 0;
@@ -25,6 +30,11 @@ public class GameScoreTest {
         }
         Assert.assertEquals(20, score);
     }
+
+    /*
+     * Prueba de la clase OriginalScore. Puntaje mayor a cero
+     * Validación del calculo del puntaje
+    */
 
     @Test
     public void validateIncorrectScoreOriginal (){
